@@ -11,5 +11,15 @@ namespace AareonTechnicalTest.Models
         public string Content { get; set; }
 
         public int PersonId { get; set; }
+
+        internal void Update(Ticket ticket)
+        {
+            if (ticket == null)
+            {
+                return;
+            }
+            Content = ticket.Content;
+            PersonId = ticket.PersonId;
+        }
     }
 }
