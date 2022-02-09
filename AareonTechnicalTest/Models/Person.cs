@@ -12,5 +12,15 @@ namespace AareonTechnicalTest.Models
         public string Surname { get; set; }
 
         public bool IsAdmin { get; set; }
+
+        public void Update(Person person)
+        {
+            if (person != null)
+            {
+                Forename = person.Forename;
+                Surname = person.Surname;
+                IsAdmin = person.IsAdmin;
+            }
+        }
     }
 }
